@@ -3,19 +3,19 @@ development:
   encoding: unicode
   database: gardenVarietyGrowStats_development
   pool: 5
-  username: gardenVarietyGrowStats
-  password:
+  username: postgres
+  password: oicu812
 test:
   adapter: postgresql
   encoding: unicode
   database: gardenVarietyGrowStats_test
   pool: 5
-  username: gardenVarietyGrowStats
-  password:
+  username: postgres
+  password: oicu812
 production:
   adapter: postgresql
   encoding: unicode
   database: gardenVarietyGrowStats_production
   pool: 5
-  username: gardenVarietyGrowStats
-  password:
+  username: postgres
+  password: oicu812

@@ -11,16 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130913003519) do
+ActiveRecord::Schema.define(:version => 20130913025145) do
 
   create_table "plants", :force => true do |t|
-    t.string   "name"
+    t.string   "variety"
     t.integer  "minDaysToGerm"
     t.integer  "maxDaysToGerm"
     t.integer  "minDaysToMaturity"
     t.integer  "maxDaysToMaturity"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "latin_name"
+    t.integer  "days_til_pollination"
   end
 
 end
