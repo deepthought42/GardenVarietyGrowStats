@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130913025145) do
+ActiveRecord::Schema.define(:version => 20130913144537) do
 
   create_table "plants", :force => true do |t|
     t.string   "variety"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130913025145) do
     t.datetime "updated_at",           :null => false
     t.string   "latin_name"
     t.integer  "days_til_pollination"
+    t.text     "description"
   end
 
 end
