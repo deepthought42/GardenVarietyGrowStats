@@ -13,11 +13,11 @@
 
   <div class="field">
     Name<br />
-    <%= f.text_field :name %>
+    <%= f.text_field :variety %>
   </div>
   <div class="field">
     Latin Name<br />
-    <%= f.text_field :latinname %>
+    <%= f.text_field :latin_name %>
   </div>
   <div class="field">
     Min Days To Germination<br />
@@ -34,6 +34,10 @@
   <div class="field">
     Max Days To Maturity<br />
     <%= f.number_field :maxDaysToMaturity %>
+  </div>
+  <div class="field">
+    Days Til Pollination<br />
+    <%= f.number_field :days_til_pollination %>
   </div>
   <div class="actions">
     <%= f.submit %>

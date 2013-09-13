@@ -2,11 +2,13 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Variety</th>
+	<th>Latin Name</th>
     <th>Min Days To Germination</th>
     <th>Max Days To Germination</th>
     <th>Min Days To Maturity</th>
     <th>Max Days To Maturity</th>
+	<th>Days Til Pollination</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,11 +16,13 @@
 
 <% @plants.each do |plant| %>
   <tr>
-    <td><%= plant.name %></td>
+    <td><%= plant.variety %></td>
+	<td><%= plant.latin_name %></td>
     <td><%= plant.minDaysToGerm %></td>
     <td><%= plant.maxDaysToGerm %></td>
     <td><%= plant.minDaysToMaturity %></td>
     <td><%= plant.maxDaysToMaturity %></td>
+	<td><%= plant.days_til_pollination %></td>
     <td><%= link_to 'Show', plant %></td>
     <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
     <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
