@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  minDaysToGerm: 1
+  maxDaysToGerm: 1
+  minDaysToMaturity: 1
+  maxDaysToMaturity: 1
+
+two:
+  name: MyString
+  minDaysToGerm: 1
+  maxDaysToGerm: 1
+  minDaysToMaturity: 1
+  maxDaysToMaturity: 1

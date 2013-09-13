@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @plant.name %>
+</p>
+
+<p>
+  <b>Mindaystogerm:</b>
+  <%= @plant.minDaysToGerm %>
+</p>
+
+<p>
+  <b>Maxdaystogerm:</b>
+  <%= @plant.maxDaysToGerm %>
+</p>
+
+<p>
+  <b>Mindaystomaturity:</b>
+  <%= @plant.minDaysToMaturity %>
+</p>
+
+<p>
+  <b>Maxdaystomaturity:</b>
+  <%= @plant.maxDaysToMaturity %>
+</p>
+
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>

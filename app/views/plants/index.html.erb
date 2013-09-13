@@ -1,0 +1,31 @@
+<h1>Listing plants</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mindaystogerm</th>
+    <th>Maxdaystogerm</th>
+    <th>Mindaystomaturity</th>
+    <th>Maxdaystomaturity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @plants.each do |plant| %>
+  <tr>
+    <td><%= plant.name %></td>
+    <td><%= plant.minDaysToGerm %></td>
+    <td><%= plant.maxDaysToGerm %></td>
+    <td><%= plant.minDaysToMaturity %></td>
+    <td><%= plant.maxDaysToMaturity %></td>
+    <td><%= link_to 'Show', plant %></td>
+    <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
+    <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Plant', new_plant_path %>

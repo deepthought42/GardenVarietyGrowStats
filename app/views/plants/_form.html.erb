@@ -1,0 +1,37 @@
+<%= form_for(@plant) do |f| %>
+  <% if @plant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plant.errors.count, "error") %> prohibited this plant from being saved:</h2>
+
+      <ul>
+      <% @plant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :minDaysToGerm %><br />
+    <%= f.number_field :minDaysToGerm %>
+  </div>
+  <div class="field">
+    <%= f.label :maxDaysToGerm %><br />
+    <%= f.number_field :maxDaysToGerm %>
+  </div>
+  <div class="field">
+    <%= f.label :minDaysToMaturity %><br />
+    <%= f.number_field :minDaysToMaturity %>
+  </div>
+  <div class="field">
+    <%= f.label :maxDaysToMaturity %><br />
+    <%= f.number_field :maxDaysToMaturity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
