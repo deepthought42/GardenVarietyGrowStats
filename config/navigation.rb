@@ -49,7 +49,6 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
     #
-    primary.item :Home, 'Home', url, options
 
     # Add an item which has a sub navigation (same params, but with block)
     primary.item :plants, 'Plants', plants_path
@@ -58,8 +57,8 @@ SimpleNavigation::Configuration.run do |navigation|
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,
     # thus you can use all the methods and vars you have available in the views.
-    primary.item :key_3, 'Admin', url, :class => 'special', :if => Proc.new { current_user.admin? }
-    primary.item :key_4, 'Account', url, :unless => Proc.new { logged_in? }
+   # primary.item :key_3, 'Admin', url, :class => 'special', :if => Proc.new { current_user.admin? }
+  #  primary.item :key_4, 'Account', url, :unless => Proc.new { logged_in? }
 
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu
@@ -70,5 +69,4 @@ SimpleNavigation::Configuration.run do |navigation|
     # primary.auto_highlight = false
 
   end
-
 end
