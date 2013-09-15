@@ -10,7 +10,7 @@ class CreateMushrooms < ActiveRecord::Migration
       t.integer :spwan_time_max
       t.integer :fruit_time_min
       t.integer :fruit_time_max
-      t.precision :price_per_ounce
+      t.float :price_per_ounce, :precision => 2
 
       t.timestamps
     end

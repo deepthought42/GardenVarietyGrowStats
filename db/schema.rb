@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130915144123) do
+ActiveRecord::Schema.define(:version => 20130915164109) do
+
+  create_table "mushrooms", :force => true do |t|
+    t.string   "variety"
+    t.string   "latin_name"
+    t.string   "difficulty"
+    t.text     "description"
+    t.string   "substrate"
+    t.integer  "spawn_time_min"
+    t.integer  "spwan_time_max"
+    t.integer  "fruit_time_min"
+    t.integer  "fruit_time_max"
+    t.float    "price_per_ounce"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.text     "growth_notes"
+  end
 
   create_table "plants", :force => true do |t|
     t.string   "variety"
