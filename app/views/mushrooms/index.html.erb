@@ -1,0 +1,41 @@
+<h1>Listing mushrooms</h1>
+
+<table>
+  <tr>
+    <th>Variety</th>
+    <th>Latin name</th>
+    <th>Difficulty</th>
+    <th>Description</th>
+    <th>Substrate</th>
+    <th>Spawn time min</th>
+    <th>Spwan time max</th>
+    <th>Fruit time min</th>
+    <th>Fruit time max</th>
+    <th>Price per ounce</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mushrooms.each do |mushroom| %>
+  <tr>
+    <td><%= mushroom.variety %></td>
+    <td><%= mushroom.latin_name %></td>
+    <td><%= mushroom.difficulty %></td>
+    <td><%= mushroom.description %></td>
+    <td><%= mushroom.substrate %></td>
+    <td><%= mushroom.spawn_time_min %></td>
+    <td><%= mushroom.spwan_time_max %></td>
+    <td><%= mushroom.fruit_time_min %></td>
+    <td><%= mushroom.fruit_time_max %></td>
+    <td><%= mushroom.price_per_ounce %></td>
+    <td><%= link_to 'Show', mushroom %></td>
+    <td><%= link_to 'Edit', edit_mushroom_path(mushroom) %></td>
+    <td><%= link_to 'Destroy', mushroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mushroom', new_mushroom_path %>

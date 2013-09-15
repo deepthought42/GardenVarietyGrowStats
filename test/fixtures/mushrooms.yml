@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  variety: MyString
+  latin_name: MyString
+  difficulty: MyString
+  description: MyText
+  substrate: MyString
+  spawn_time_min: 1
+  spwan_time_max: 1
+  fruit_time_min: 1
+  fruit_time_max: 1
+  price_per_ounce: 
+
+two:
+  variety: MyString
+  latin_name: MyString
+  difficulty: MyString
+  description: MyText
+  substrate: MyString
+  spawn_time_min: 1
+  spwan_time_max: 1
+  fruit_time_min: 1
+  fruit_time_max: 1
+  price_per_ounce: 

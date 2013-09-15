@@ -1,0 +1,57 @@
+<%= form_for(@mushroom) do |f| %>
+  <% if @mushroom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mushroom.errors.count, "error") %> prohibited this mushroom from being saved:</h2>
+
+      <ul>
+      <% @mushroom.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :variety %><br />
+    <%= f.text_field :variety %>
+  </div>
+  <div class="field">
+    <%= f.label :latin_name %><br />
+    <%= f.text_field :latin_name %>
+  </div>
+  <div class="field">
+    <%= f.label :difficulty %><br />
+    <%= f.text_field :difficulty %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :substrate %><br />
+    <%= f.text_field :substrate %>
+  </div>
+  <div class="field">
+    <%= f.label :spawn_time_min %><br />
+    <%= f.number_field :spawn_time_min %>
+  </div>
+  <div class="field">
+    <%= f.label :spwan_time_max %><br />
+    <%= f.number_field :spwan_time_max %>
+  </div>
+  <div class="field">
+    <%= f.label :fruit_time_min %><br />
+    <%= f.number_field :fruit_time_min %>
+  </div>
+  <div class="field">
+    <%= f.label :fruit_time_max %><br />
+    <%= f.number_field :fruit_time_max %>
+  </div>
+  <div class="field">
+    <%= f.label :price_per_ounce %><br />
+    <%= f.text_field :price_per_ounce %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

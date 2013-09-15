@@ -1,4 +1,7 @@
 GardenVarietyGrowStats::Application.routes.draw do
+  resources :mushrooms
+
+
   resources :plants
 
   root to: "plants#index"
