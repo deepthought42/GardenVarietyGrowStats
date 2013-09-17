@@ -51,6 +51,8 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
     #
 
+	primary.dom_id = 'navMenu'
+	
     # Add an item which has a sub navigation (same params, but with block)
     primary.item :plants, 'Plants', plants_path, :id => 'plantLink'
 	primary.item :mushrooms, 'Mushrooms', mushrooms_path, :id => 'mushroomLink'
