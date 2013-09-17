@@ -29,7 +29,8 @@ SimpleNavigation::Configuration.run do |navigation|
   # The auto highlight feature is turned on by default.
   # This turns it off globally (for the whole plugin)
   navigation.auto_highlight = false
-
+  navigation.autogenerate_item_ids = false
+  
   # Define the primary navigation
   navigation.items do |primary|
     # Add an item to the primary navigation. The following params apply:
@@ -51,8 +52,8 @@ SimpleNavigation::Configuration.run do |navigation|
     #
 
     # Add an item which has a sub navigation (same params, but with block)
-    primary.item :plants, 'Plants', plants_path
-	primary.item :mushrooms, 'Mushrooms', mushrooms_path
+    primary.item :plants, 'Plants', plants_path, :id => 'plantLink'
+	primary.item :mushrooms, 'Mushrooms', mushrooms_path, :id => 'mushroomLink'
 
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,

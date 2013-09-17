@@ -29,6 +29,11 @@ a {
   }
 }
 
+li
+{
+	display:inline;
+}
+
 div {
   &.field, &.actions {
     margin-bottom: 10px;
