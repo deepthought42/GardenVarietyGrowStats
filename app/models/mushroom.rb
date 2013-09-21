@@ -7,6 +7,5 @@ class Mushroom < ActiveRecord::Base
     medium: '300x300>'
   },
   :storage => :s3,
-  :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-  :path => ":attachment/:id/:style.:extension"
+  :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
 end
