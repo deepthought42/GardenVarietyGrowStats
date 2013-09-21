@@ -39,3 +39,6 @@ gem 'jquery-rails'
 
 gem 'rails_12factor', group: :production
 gem 'simple-navigation'
+
+gem 'paperclip'
+gem 'aws-sdk'
