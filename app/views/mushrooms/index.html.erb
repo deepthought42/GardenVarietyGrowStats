@@ -20,7 +20,7 @@
 
 <% @mushrooms.each do |mushroom| %>
   <tr>
-	<td><%= image_tag mushroom.picture.url(:square) %></td>
+	<td><%= image_tag mushroom.picture.url(:thumbnail) %></td>
     <td><%= mushroom.variety %></td>
     <td><%= mushroom.latin_name %></td>
     <td><%= mushroom.difficulty %></td>
