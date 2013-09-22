@@ -1,9 +1,0 @@
-development:
- access_key_id: AKIAI4MRAQWJCF4LRGCQ
- secret_access_key: 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
- bucket: elasticbeanstalk-us-west-2-600707264672
- 
-production:
- access_key_id: AKIAI4MRAQWJCF4LRGCQ
- secret_access_key: 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
- bucket: elasticbeanstalk-us-west-2-600707264672
