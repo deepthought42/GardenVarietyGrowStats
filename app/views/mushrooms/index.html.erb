@@ -15,8 +15,11 @@
 				<a class="cbp-vm-image" href="#"><%= image_tag mushroom.picture.url(:square) %></a>
 				<h3 class="cbp-vm-title">
 					<%= mushroom.variety %><br />
-					<%= mushroom.latin_name %>
+					
 				</h3>
+				<h5 class="cbp-vm-title">
+					<%= mushroom.latin_name %>
+				<h5>
 				<div class="cbp-vm-price">$XX.XX</div>
 				<div class="cbp-vm-details">
 					<%= mushroom.difficulty %>
