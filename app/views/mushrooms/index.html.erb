@@ -12,14 +12,14 @@
 		<% @mushrooms.each do |mushroom| %>
 			<li>
 				
-				<a class="cbp-vm-image" href="#"><%= image_tag mushroom.picture.url(:square) %></a>
+				<a class="cbp-vm-image" href="#"><%= image_tag mushroom.picture.url(:thumb) %></a>
 				<h3 class="cbp-vm-title">
 					<%= mushroom.variety %><br />
 					
 				</h3>
-				<h5 class="cbp-vm-title">
+				<div class="cbp-vm-details">
 					<%= mushroom.latin_name %>
-				<h5>
+				<div>
 				<div class="cbp-vm-price">$XX.XX</div>
 				<div class="cbp-vm-details">
 					<%= mushroom.difficulty %>
