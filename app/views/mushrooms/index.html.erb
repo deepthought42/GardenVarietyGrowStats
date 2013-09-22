@@ -1,5 +1,3 @@
-<h1>Listing mushrooms</h1>
-
 <div class="container">
 <header class="clearfix">
 	<h1>Mushrooms</h1>	
@@ -22,7 +20,7 @@
 					<%= mushroom.difficulty %>
 				<div>
 				<div class="cbp-vm-details">
-					<%= mushroom.description.truncate(40) %>
+					<%= mushroom.description.truncate(100) %>
 				</div>
 				<div>
 					<%= link_to 'Show', mushroom, {:class=>"cbp-vm-icon cbp-vm-add"}%>
