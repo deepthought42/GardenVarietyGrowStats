@@ -1,4 +1,39 @@
-<h1>Listing plants</h1>
+<header class="clearfix">
+	<h1>Plants</h1>	
+</header>	
+
+
+<div class="main">
+	<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
+		<ul>
+		<% @plants.each do |plant| %>
+			<li>
+				
+				<a class="cbp-vm-image" href="#"><%= image_tag plant.picture.url(:thumb) %></a>
+				<h3 class="cbp-vm-title">
+					<%= plant.variety %><br />
+					
+				</h3>
+				<div class="cbp-vm-details">
+					<%= plant.latin_name %>
+				<div>
+				<div class="cbp-vm-details">
+					<%= plant.minDaysToGerm %> - 
+					<%= plant.maxDaysToGerm %>
+				<div>
+				<div class="cbp-vm-details">
+					<%= plant.description.truncate(100) %>
+				</div>
+				<div>
+					<%= link_to 'Show', mushroom, {:class=>"cbp-vm-icon cbp-vm-add"}%>
+					<%= link_to 'Edit', edit_mushroom_path(mushroom), {:class=>"cbp-vm-icon cbp-vm-add"} %>
+					<%= link_to 'Destroy', mushroom, {:class => "cbp-vm-icon cbp-vm-add"}, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</div>
+			</li>
+		<% end %>
+		</ul>
+	</div>
+</div><!-- /main -->
 
 <table>
   <tr>
