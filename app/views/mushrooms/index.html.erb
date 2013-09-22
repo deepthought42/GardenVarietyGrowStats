@@ -1,42 +1,39 @@
 <h1>Listing mushrooms</h1>
 
-<table>
-  <tr>
-	<th>Picture</th>
-    <th>Variety</th>
-    <th>Latin name</th>
-    <th>Difficulty</th>
-    <th>Description</th>
-    <th>Substrate</th>
-    <th>Spawn time min</th>
-    <th>Spwan time max</th>
-    <th>Fruit time min</th>
-    <th>Fruit time max</th>
-    <th>Price per ounce</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @mushrooms.each do |mushroom| %>
-  <tr>
-	<td><%= image_tag mushroom.picture.url(:square) %></td>
-    <td><%= mushroom.variety %></td>
-    <td><%= mushroom.latin_name %></td>
-    <td><%= mushroom.difficulty %></td>
-    <td><%= mushroom.description %></td>
-    <td><%= mushroom.substrate %></td>
-    <td><%= mushroom.spawn_time_min %></td>
-    <td><%= mushroom.spwan_time_max %></td>
-    <td><%= mushroom.fruit_time_min %></td>
-    <td><%= mushroom.fruit_time_max %></td>
-    <td><%= mushroom.price_per_ounce %></td>
-    <td><%= link_to 'Show', mushroom %></td>
-    <td><%= link_to 'Edit', edit_mushroom_path(mushroom) %></td>
-    <td><%= link_to 'Destroy', mushroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="container">
+<header class="clearfix">
+	<h1>Mushrooms</h1>	
+</header>	
+<div class="main">
+	<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
+		<div class="cbp-vm-options">
+			<a href="#" class="cbp-vm-icon cbp-vm-grid cbp-vm-selected" data-view="cbp-vm-view-grid">Grid View</a>
+			<a href="#" class="cbp-vm-icon cbp-vm-list" data-view="cbp-vm-view-list">List View</a>
+		</div>
+		<ul>
+		<% @mushrooms.each do |mushroom| %>
+			<li>
+				<a class="cbp-vm-image" href="#"><img src="images/1.png"></a>
+				<h3 class="cbp-vm-title">
+					<% mushroom.variety %>
+				</h3>
+				<div class="cbp-vm-price">$XX.XX</div>
+				<div class="cbp-vm-details">
+					<%= mushroom.difficulty %>
+				<div>
+				<div class="cbp-vm-details">
+					<%= mushroom.description %>
+				</div>
+				
+				<%= link_to 'Show', mushroom, {:class=>"cbp-vm-icon cbp-vm-add"}%>
+				<%= link_to 'Edit', edit_mushroom_path(mushroom), {:class=>"cbp-vm-icon cbp-vm-add"} %>
+				<%= link_to 'Destroy', mushroom, {:class => "cbp-vm-icon cbp-vm-add"}, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</li>
+		<% end %>
+		</ul>
+	</div>
+</div><!-- /main -->
+</div><!-- /container -->
 
 <br />
 
