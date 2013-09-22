@@ -24,10 +24,11 @@
 				<div class="cbp-vm-details">
 					<%= mushroom.description %>
 				</div>
-				
-				<%= link_to 'Show', mushroom, {:class=>"cbp-vm-icon cbp-vm-add"}%>
-				<%= link_to 'Edit', edit_mushroom_path(mushroom), {:class=>"cbp-vm-icon cbp-vm-add"} %>
-				<%= link_to 'Destroy', mushroom, {:class => "cbp-vm-icon cbp-vm-add"}, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<div>
+					<%= link_to 'Show', mushroom, {:class=>"cbp-vm-icon cbp-vm-add"}%>
+					<%= link_to 'Edit', edit_mushroom_path(mushroom), {:class=>"cbp-vm-icon cbp-vm-add"} %>
+					<%= link_to 'Destroy', mushroom, {:class => "cbp-vm-icon cbp-vm-add"}, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</div>
 			</li>
 		<% end %>
 		</ul>
