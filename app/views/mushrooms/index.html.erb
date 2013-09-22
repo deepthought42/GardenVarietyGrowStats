@@ -11,7 +11,8 @@
 		<ul>
 		<% @mushrooms.each do |mushroom| %>
 			<li>
-				<a class="cbp-vm-image" href="#"><img src="images/1.png"></a>
+				
+				<a class="cbp-vm-image" href="#"><%= image_tag mushroom.picture.url(:square) %></a>
 				<h3 class="cbp-vm-title">
 					<%= mushroom.variety %><br />
 					<%= mushroom.latin_name %>
