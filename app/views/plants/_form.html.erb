@@ -12,35 +12,27 @@
   <% end %>
 
   <div class="field">
-    Name<br />
     <%= f.text_field :variety, { :class => (@plant.variety ? "existingInput" : "newInputField"), :value => @plant.variety || "Common Name/Variety"} %>
   </div>
   <div class="field">
-    Latin Name<br />
     <%= f.text_field :latin_name, { :class => (@plant.latin_name ? "existingInput" : "newInputField"), :value => @plant.latin_name || "Latin name"} %>
   </div>
    <div class="field">
-    Description<br />
     <%= f.text_field :description, { :class => (@plant.description ? "existingInput" : "newInputField"), :value => @plant.description || "Description"} %>
   </div>
   <div class="field">
-    Min Days To Germination<br />
     <%= f.number_field :minDaysToGerm, { :class => (@plant.minDaysToGerm ? "existingInput" : "newInputField"), :value => @plant.minDaysToGerm || "Minimum germination Days"} %>
   </div>
   <div class="field">
-    Max Days To Germination<br />
     <%= f.number_field :maxDaysToGerm, { :class => (@plant.maxDaysToGerm ? "existingInput" : "newInputField"), :value => @plant.maxDaysToGerm || "Maximum germination Days"} %>
   </div>
   <div class="field">
-    Min Days To Maturity<br />
     <%= f.number_field :minDaysToMaturity, { :class => (@plant.minDaysToMaturity ? "existingInput" : "newInputField"), :value => @plant.minDaysToMaturity || "Minimum days to maturity"} %>
   </div>
   <div class="field">
-    Max Days To Maturity<br />
     <%= f.number_field :maxDaysToMaturity, { :class => (@plant.maxDaysToMaturity ? "existingInput" : "newInputField"), :value => @plant.maxDaysToMaturity || "Maximum days to maturity"} %>
   </div>
   <div class="field">
-    Days Til Pollination<br />
     <%= f.number_field :days_til_pollination, { :class => (@plant.days_til_pollination ? "existingInput" : "newInputField"), :value => @plant.days_til_pollination || "Days til pollination"} %>
   </div>
   <div class="actions">
