@@ -12,44 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :variety %><br />
     <%= f.text_field :variety, { :class => (@mushroom.variety ? "existingInput" : "newInputField"), :value => @mushroom.variety || "Common Name/Variety"}%>
   </div>
   <div class="field">
-    <%= f.label :latin_name %><br />
     <%= f.text_field :latin_name, { :class => (@mushroom.latin_name ? "existingInput" : "newInputField"), :value => @mushroom.latin_name || "Latin Name"}%>
   </div>
   <div class="field">
-    <%= f.label :difficulty %><br />
     <%= f.text_field :difficulty, { :class => (@mushroom.difficulty ? "existingInput" : "newInputField"), :value => @mushroom.difficulty || "Difficulty"} %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
     <%= f.text_area :description, { :class => (@mushroom.description ? "existingInput" : "newInputField"), :value => @mushroom.description || "Description"}%>
   </div>
   <div class="field">
-    <%= f.label :substrate %><br />
     <%= f.text_field :substrate, { :class => (@mushroom.substrate ? "existingInput" : "newInputField"), :value => @mushroom.substrate || "Substrate"} %>
   </div>
   <div class="field">
-    <%= f.label :spawn_time_min %><br />
     <%= f.number_field :spawn_time_min, { :class => (@mushroom.spawn_time_min ? "existingInput" : "newInputField"), :value => @mushroom.spawn_time_min || "Minimum spawn time"} %>
   </div>
   <div class="field">
-    <%= f.label :spwan_time_max %><br />
     <%= f.number_field :spwan_time_max, { :class => (@mushroom.spwan_time_max ? "existingInput" : "newInputField"), :value => @mushroom.spwan_time_max || "Maximum spawn time"} %>
   </div>
   <div class="field">
-    <%= f.label :fruit_time_min %><br />
     <%= f.number_field :fruit_time_min, { :class => (@mushroom.fruit_time_min ? "existingInput" : "newInputField"), :value => @mushroom.fruit_time_min || "Minimum fruit time"} %>
   </div>
   <div class="field">
-    <%= f.label :fruit_time_max %><br />
     <%= f.number_field :fruit_time_max, { :class => (@mushroom.fruit_time_max ? "existingInput" : "newInputField"), :value => @mushroom.fruit_time_max || "Maximum fruit time"} %>
   </div>
   <div class="field">
-    <%= f.label :price_per_ounce %><br />
-    <%= f.text_field :price_per_ounce, { :class => (@mushroom.price_per_ounce ? "existingInput" : "newInputField"), :value => @mushroom.price_per_ounce || "Price per ounce"} %>
+    $<%= f.text_field :price_per_ounce, { :class => (@mushroom.price_per_ounce ? "existingInput" : "newInputField"), :value => @mushroom.price_per_ounce || "Price per ounce"} %>
   </div>
   <div class="field">
     <%= f.label :picture %><br />
