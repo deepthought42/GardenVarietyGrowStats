@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :variety %><br />
-    <%= f.text_field :variety, { :class => (@mushroom.name ? "existingInput" : "newInputField"), :value => @mushroom.name || "Common Name"}%>
+    <%= f.text_field :variety, { :class => (@mushroom.variety ? "existingInput" : "newInputField"), :value => @mushroom.variety || "Common Name/Variety"}%>
   </div>
   <div class="field">
     <%= f.label :latin_name %><br />
