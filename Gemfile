@@ -42,3 +42,4 @@ gem 'simple-navigation'
 
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'textacular'

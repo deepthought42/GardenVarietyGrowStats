@@ -6,4 +6,12 @@ class Mushroom < ActiveRecord::Base
     square: '200x200#',
     medium: '300x300>'
   }
+  
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['variety LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
 end

@@ -2,7 +2,7 @@ class MushroomsController < ApplicationController
   # GET /mushrooms
   # GET /mushrooms.json
   def index
-    @mushrooms = Mushroom.all
+	@mushrooms = Mushroom.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb

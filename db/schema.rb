@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130927052728) do
+ActiveRecord::Schema.define(:version => 20130929224454) do
 
   create_table "mushrooms", :force => true do |t|
     t.string   "variety"
@@ -51,5 +51,7 @@ ActiveRecord::Schema.define(:version => 20130927052728) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
   end
+
+  add_index "plants", ["variety", "latin_name"], :name => "index_plants_on_variety_and_latin_name"
 
 end
