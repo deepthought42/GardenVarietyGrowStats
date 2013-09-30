@@ -1,12 +1,12 @@
 <div class="container">
 <header class="clearfix">
 	<h1>Mushrooms</h1>	
-	<% form_tag mushrooms_path, :method => 'get' do %>
-	<p>
-		<%= text_field_tag :search, params[:search] %>
-		<%= submit_tag "Search", :name => nil %>
-	</p>
-<% end %>
+	<%= form_tag mushrooms_path, :method => 'get' do %>
+		<p>
+			<%= text_field_tag :search, params[:search] %>
+			<%= submit_tag "Search", :variety => nil %>
+		</p>
+	<% end %>
 </header>	
 <div class="main">
 	
