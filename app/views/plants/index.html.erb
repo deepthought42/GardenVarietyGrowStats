@@ -1,6 +1,12 @@
 <div class="container">
 <header class="clearfix">
 	<h1>Plants</h1>	
+	<%= form_tag mushrooms_path, :method => 'get' do %>
+		<p>
+			<%= text_field_tag :search, params[:search] %>
+			<%= submit_tag "Search", :variety => nil %>
+		</p>
+	<% end %>
 </header>	
 <div class="main">
 	<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
