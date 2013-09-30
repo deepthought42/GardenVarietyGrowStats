@@ -9,7 +9,7 @@ class Mushroom < ActiveRecord::Base
   
   def self.search(search)
     if search
-      find(:all, :conditions => ['lower(variety) = ?', search.downcase])
+      find(:all, :conditions => ['lower(variety) LIKE ?', "%#{search.downcase}%"])
     else
       find(:all)
     end
