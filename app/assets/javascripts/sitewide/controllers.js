@@ -1,5 +1,6 @@
 'use strict';
 
+var gardenApp = angular.module('gardenApp', []);
 /* Controllers */
 
 function MushroomListCtrl($scope, $http) {
@@ -8,5 +9,7 @@ function MushroomListCtrl($scope, $http) {
     $scope.mushrooms = data;
   });
 }
+
+gardenApp.controller('MushroomListCtrl', ['$scope', '$http', MushroomListCtrl]);
 
 angular.module('farmStatsApp', []).controller('MushroomListCtrl', MushroomListCtrl);
