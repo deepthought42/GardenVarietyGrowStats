@@ -73,6 +73,4 @@ GardenVarietyGrowStats::Application.configure do
 		:secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
 	  }
 	}
-	
-	config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(:mangle => false) }	
 end
