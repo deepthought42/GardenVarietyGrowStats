@@ -1,6 +1,7 @@
 <div class="container">
 <header class="clearfix">
 	<h1>Mushrooms</h1>	
+	<input type="textfield" ng-model="query" />
 	<%= form_tag mushrooms_path, :method => 'get' do %>
 		<p>
 			<%= text_field_tag :search, params[:search] %>
@@ -11,9 +12,24 @@
 <div class="main">
 	
 	<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
-		<div class="cbp-vm-options">
-			<a href="#" class="cbp-vm-icon cbp-vm-grid cbp-vm-selected" data-view="cbp-vm-view-grid">Grid View</a>
-			<a href="#" class="cbp-vm-icon cbp-vm-list" data-view="cbp-vm-view-list">List View</a>
+		<div ng-controller="MushroomListCtrl">
+			<ul>
+				<li ng-repeat="mushroom in mushrooms | filter:query">
+				<h3 class="cbp-vm-title">
+					{{mushroom.variety}}<br />					
+				</h3>
+				<div class="cbp-vm-details">
+					{{mushroom.latin_name}}
+				<div>
+				<div class="cbp-vm-details">
+					{{mushroom.difficulty}}
+				<div>
+				<div class="cbp-vm-details">
+					{{mushroom.description}}
+				</div>
+
+				</li>
+			</ul>
 		</div>
 		<ul>
 		<% @mushrooms.each do |mushroom| %>
