@@ -8,7 +8,9 @@
 	<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
 		<div ng-controller="MushroomListCtrl">
 			<ul>
+			
 				<li ng-repeat="mushroom in mushrooms | filter:query">
+				<a href="#/phones/{{mushroom.id}}" class="thumb"><img ng-src="{{mushroom.picture_file_name}}"></a>
 				<h3 class="cbp-vm-title">
 					{{mushroom.variety}}<br />					
 				</h3>
