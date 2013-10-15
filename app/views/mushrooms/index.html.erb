@@ -2,12 +2,6 @@
 <header class="clearfix">
 	<h1>Mushrooms</h1>	
 	<input type="textfield" ng-model="query" />
-	<%= form_tag mushrooms_path, :method => 'get' do %>
-		<p>
-			<%= text_field_tag :search, params[:search] %>
-			<%= submit_tag "Search", :variety => nil %>
-		</p>
-	<% end %>
 </header>	
 <div class="main">
 	
