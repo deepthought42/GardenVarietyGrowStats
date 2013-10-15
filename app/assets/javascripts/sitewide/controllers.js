@@ -10,6 +10,4 @@ function MushroomListCtrl($scope, $http) {
   });
 }
 
-gardenApp.controller('MushroomListCtrl', ['$scope', '$http', MushroomListCtrl]);
-
-angular.module('farmStatsApp', []).controller('MushroomListCtrl', MushroomListCtrl);
+gardenApp.controller('MushroomListCtrl', ['$scope', '$http', MushroomListCtrl])
