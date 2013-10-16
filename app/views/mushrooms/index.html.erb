@@ -10,7 +10,7 @@
 			<ul>
 			
 				<li ng-repeat="mushroom in mushrooms | filter:query">
-				<a href="#/phones/{{mushroom.id}}" class="thumb"><img ng-src="{{mushroom.picture_file_name}}"></a>
+				<a href="#/phones/{{mushroom.id}}" class="thumb"><%= image_tag mushroom.picture.url(:thumb) %></a>
 				<h3 class="cbp-vm-title">
 					{{mushroom.variety}}<br />					
 				</h3>
