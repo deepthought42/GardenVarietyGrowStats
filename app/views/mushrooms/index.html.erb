@@ -10,7 +10,7 @@
 			<ul>
 			
 				<li ng-repeat="mushroom in mushrooms | filter:query">
-				<a href="#/mushrooms/{{mushroom.id}}" class="thumb"><img src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-600707264672/images/thumbs/{{mushroom.picture_file_name}}"></a>
+				<a href="#/mushrooms/{{mushroom.id}}" class="thumb"><img src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-600707264672/images/thumbs/mushrooms/{{mushroom.picture_file_name}}"></a>
 				<h3 class="cbp-vm-title">
 					{{mushroom.variety}}<br />						
 				</h3>
@@ -27,31 +27,6 @@
 				</li>
 			</ul>
 		</div>
-		<ul>
-		<% @mushrooms.each do |mushroom| %>
-			<li>
-				
-				<a class="cbp-vm-image" href="#"><%= image_tag mushroom.picture.url(:thumb) %></a>
-				<h3 class="cbp-vm-title">
-					<%= mushroom.variety %><br />					
-				</h3>
-				<div class="cbp-vm-details">
-					<%= mushroom.latin_name %>
-				<div>
-				<div class="cbp-vm-details">
-					<%= mushroom.difficulty %>
-				<div>
-				<div class="cbp-vm-details">
-					<%= mushroom.description.truncate(100) %>
-				</div>
-				<div>
-					<%= link_to 'Show', mushroom, {:class=>"cbp-vm-icon cbp-vm-add"}%>
-					<%= link_to 'Edit', edit_mushroom_path(mushroom), {:class=>"cbp-vm-icon cbp-vm-add"} %>
-					<%= link_to 'Destroy', mushroom, {:class => "cbp-vm-icon cbp-vm-add"}, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-				</div>
-			</li>
-		<% end %>
-		</ul>
 	</div>
 </div><!-- /main -->
 </div><!-- /container -->
