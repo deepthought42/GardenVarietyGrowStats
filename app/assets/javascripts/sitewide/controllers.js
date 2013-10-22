@@ -1,6 +1,5 @@
 'use strict';
 
-var gardenApp = angular.module('gardenApp', []);
 /* Controllers */
 
 function MushroomListCtrl($scope, $http) {
