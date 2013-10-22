@@ -9,7 +9,12 @@ function MushroomListCtrl($scope, $http) {
   });
 }
 
+function MushroomDetailCtrl($scope, $routeParams) {
+  $scope.mushroomId = $routeParams.mushroomId;
+}
+  
 gardenApp.controller('MushroomListCtrl', ['$scope', '$http', MushroomListCtrl])
+gardenApp.controller('MushroomDetailCtrl', ['$scope', '$routeParams', MushroomDetailCtrl]);
 
 function PlantListCtrl($scope, $http) {
   $http.get('/plants.json').success(function(data) {
