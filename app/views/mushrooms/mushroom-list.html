@@ -1,0 +1,35 @@
+<div class="container">
+<header class="clearfix">
+	<h1>Mushrooms</h1>	
+	<input type="textfield" ng-model="query" />
+</header>	
+<div class="main">
+	
+	<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
+		<div ng-controller="MushroomListCtrl">
+			<ul>
+			
+				<li ng-repeat="mushroom in mushrooms | filter:query">
+				<a href="#/mushrooms/{{mushroom.id}}" class="thumb"><img src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-600707264672/images/thumbs/mushrooms/{{mushroom.picture_file_name}}"></a>
+				<h3 class="cbp-vm-title">
+					{{mushroom.variety}}<br />						
+				</h3>
+				<div class="cbp-vm-details">
+					{{mushroom.latin_name}}
+				<div>
+				<div class="cbp-vm-details">
+					{{mushroom.difficulty}}
+				<div>
+				<div class="cbp-vm-details">
+					{{mushroom.description}}
+				</div>
+				<div>
+					<a href="#" class="cbp-vm-icon cbp-vm-add"></a>
+					<a href="#" class="cbp-vm-icon cbp-vm-add"></a>	
+				</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /main -->
+</div><!-- /container -->

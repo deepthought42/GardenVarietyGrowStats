@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Variety:</b>
+  <%= @mushroom.variety %>
+</p>
+
+<p>
+  <b>Latin name:</b>
+  <%= @mushroom.latin_name %>
+</p>
+
+<p>
+  <b>Difficulty:</b>
+  <%= @mushroom.difficulty %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @mushroom.description %>
+</p>
+
+<p>
+  <b>Substrate:</b>
+  <%= @mushroom.substrate %>
+</p>
+
+<p>
+  <b>Spawn time min:</b>
+  <%= @mushroom.spawn_time_min %>
+</p>
+
+<p>
+  <b>Spwan time max:</b>
+  <%= @mushroom.spwan_time_max %>
+</p>
+
+<p>
+  <b>Fruit time min:</b>
+  <%= @mushroom.fruit_time_min %>
+</p>
+
+<p>
+  <b>Fruit time max:</b>
+  <%= @mushroom.fruit_time_max %>
+</p>
+
+<p>
+  <b>Price per ounce:</b>
+  <%= @mushroom.price_per_ounce %>
+</p>
+
+
+<%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
+<%= link_to 'Back', mushrooms_path %>
