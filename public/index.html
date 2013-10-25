@@ -97,6 +97,31 @@
                 <label for="context">Substrate</label>
                 <input id="context" type="text" ng-model="mushroom.substrate"/>
             </li>
+			<li data-role="fieldcontain">
+                <label for="context">Difficulty</label>
+                <input id="context" type="text" ng-model="mushroom.difficulty"/>
+            </li>
+			<li data-role="fieldcontain">
+                <label for="context">Min. Spawn Time</label>
+                <input id="context" type="text" ng-model="mushroom.spawn_time_min"/>
+            </li>
+			<li data-role="fieldcontain">
+                <label for="context">Max Spawn time</label>
+                <input id="context" type="text" ng-model="mushroom.spwan_time_max"/>
+            </li>
+			<li data-role="fieldcontain">
+                <label for="context">Min. Fruit Time</label>
+                <input id="context" type="text" ng-model="mushroom.min_fruit_time"/>
+            </li>
+			<li data-role="fieldcontain">
+                <label for="context">Max. Fruit Time</label>
+                <input id="context" type="text" ng-model="mushroom.max_fruit_time"/>
+            </li>
+			
+			<li data-role="fieldcontain">
+                <label for="context">Price per oz</label>
+                <input id="context" type="text" ng-model="mushroom.price_per_oz"/>
+            </li>
         </ul>
         <button data-inline="true" onclick="$.mobile.changePage('#mushroom-list')" ng-click="saveMushroom(mushroom.id)">
             Create Mushroom
