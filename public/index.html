@@ -53,11 +53,11 @@
         <div data-role="navbar" data-iconpos="bottom">
             <ul>
                 <li>
-                    <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                    <a href="#index" data-transition="fade" data-theme="" data-icon="home">
                     </a>
                 </li>
                 <li>
-                    <a href="#page1" data-transition="fade" data-theme="" data-icon="">
+                    <a href="#plant-list" data-transition="fade" data-theme="" data-icon="">
                         Plant
                     </a>
                 </li>
@@ -128,11 +128,11 @@
                 <div data-role="navbar" data-iconpos="bottom">
             <ul>
                 <li>
-                    <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                    <a href="#index" data-transition="fade" data-theme="" data-icon="home">
                     </a>
                 </li>
                 <li>
-                    <a href="#page1" data-transition="fade" data-theme="" data-icon="">
+                    <a href="#plant-list" data-transition="fade" data-theme="" data-icon="">
                         Plant
                     </a>
                 </li>
@@ -146,6 +146,56 @@
     </div>
 </div>
 
+<div data-role="page" id="plant-list" >
+    <div data-theme="a" data-role="header">
+		<a href="#" data-icon="back" data-rel="back">Back</a>
+		 <a href="#plant-detail" ng-click="newPlant()" data-icon="add" class="ui-btn-right">New</a>
+
+        <h3>
+            Plants
+        </h3>
+        
+    </div>
+	
+     
+     <div data-role="content" >
+	   <!--Sidebar content-->
+		<div data-role="fieldcontain">
+			<input ng-model="query" name="" id="searchinput4" placeholder="" value="" type="search">
+		</div>
+        <!--Body content-->
+
+         <ul data-role="listview" data-divider-theme="b" data-inset="true" class="plants">
+			<li data-theme="c" ng-repeat="plant in plants | filter:query">
+                <a href="#plant-detail" data-transition="slide" ng-click="selectPlant(plant.id)" value="{{plant.id}}"> 
+                    {{plant.variety}}
+                </a>
+            </li>
+        </ul>
+    </div>
+
+	
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li>
+                    <a href="#index" data-transition="fade" data-theme="" data-icon="home">
+                    </a>
+                </li>
+                <li>
+                    <a href="#plant-list" data-transition="fade" data-theme="" data-icon="">
+                        Plant
+                    </a>
+                </li>
+                <li>
+                    <a href="#mushroom-list" data-transition="fade" data-theme="" data-icon="">
+                        Mushroom
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
   <!-- jQuery and jQuery Mobile -->
   <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
   <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>

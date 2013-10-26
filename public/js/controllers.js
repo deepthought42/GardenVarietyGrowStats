@@ -42,10 +42,33 @@ function MushroomDetailCtrl($scope, $routeParams, Mushroom) {
 gardenApp.controller('MushroomListCtrl', ['$scope', 'Mushroom', MushroomListCtrl])
 gardenApp.controller('MushroomDetailCtrl', ['$scope', '$routeParams', 'Mushroom', MushroomDetailCtrl]);
 
-function PlantListCtrl($scope, $http) {
-  $http.get('/plants/plants.json').success(function(data) {
-    $scope.plants = data;
-  });
+function PlantListCtrl($scope, Plant) {
+	$scope.plants = Plant.query();
+	$scope.selectPlant = function (id) {
+		console.log(id);
+        $scope.plant = _.where($scope.plants, {id: id})[0];
+    }
+	
+    $scope.newPlant = function () {
+        $scope.plant = new Plant();
+    }
+	
+	 $scope.savePlant = function () {
+        if ($scope.plant.id == null) {
+            $scope.plants.push($scope.plant);
+			$scope.plant.$save();
+        }
+        else {
+            Plant.update({plantId: $scope.plant.id}, $scope.plant, function (data) {
+            });
+        }
+    }
+
+    $scope.completePlant = function (id) {
+        Plant.delete({plantId: id}, function () {
+            $scope.plants = _.without($scope.plants, $scope.plant);
+        });
+    }
 }
 
 gardenApp.controller('PlantListCtrl', ['$scope', 'Plant', PlantListCtrl])
