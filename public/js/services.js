@@ -11,8 +11,9 @@ angular.module('farmStatsServices', ['ngResource']).
 				update: {method: "PUT"},
 				query: {method:'GET', params:{mushroomId:'mushrooms'}, isArray:true}
 			}
-	)}).
-    factory('Plant', function($resource){
+	)});
+	
+gardenApp.factory('Plant', function($resource){
 		return $resource(
 			'plants/:Id', 
 			{}, 
