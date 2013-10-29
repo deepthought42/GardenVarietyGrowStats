@@ -42,8 +42,8 @@ gardenApp.controller('MushroomDetailCtrl', ['$rootScope', 'Mushroom', MushroomDe
 
 function PlantListCtrl($rootScope, Plant) {
 	$rootScope.plants = Plant.query();
+	
 	$rootScope.selectPlant = function (id) {
-		console.log(id);
         $rootScope.plant = _.where($rootScope.plants, {id: id})[0];
     }
 	
