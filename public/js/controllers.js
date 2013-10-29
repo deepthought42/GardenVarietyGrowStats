@@ -40,33 +40,37 @@ function MushroomDetailCtrl($rootScope, Mushroom) {
 gardenApp.controller('MushroomListCtrl', ['$rootScope', 'Mushroom', MushroomListCtrl])
 gardenApp.controller('MushroomDetailCtrl', ['$rootScope', 'Mushroom', MushroomDetailCtrl]);
 
-function PlantListCtrl($scope, Plant) {
-	$scope.plants = Plant.query();
-	$scope.selectPlant = function (id) {
+function PlantListCtrl($rootScope, Plant) {
+	$rootScope.plants = Plant.query();
+	$rootScope.selectPlant = function (id) {
 		console.log(id);
-        $scope.plant = _.where($scope.plants, {id: id})[0];
+        $rootScope.plant = _.where($rootScope.plants, {id: id})[0];
     }
 	
-    $scope.newPlant = function () {
-        $scope.plant = new Plant();
+    $rootScope.newPlant = function () {
+        $rootScope.plant = new Plant();
     }
 	
-	 $scope.savePlant = function () {
-        if ($scope.plant.id == null) {
-            $scope.plants.push($scope.plant);
-			$scope.plant.$save();
+	 $rootScope.savePlant = function () {
+        if ($rootScope.plant.id == null) {
+            $rootScope.plants.push($rootScope.plant);
+			$rootScope.plant.$save();
         }
         else {
-            Plant.update({plantId: $scope.plant.id}, $scope.plant, function (data) {
+            Plant.update({plantId: $rootScope.plant.id}, $rootScope.plant, function (data) {
             });
         }
     }
 
-    $scope.completePlant = function (id) {
+    $rootScope.completePlant = function (id) {
         Plant.delete({plantId: id}, function () {
-            $scope.plants = _.without($scope.plants, $scope.plant);
+            $rootScope.plants = _.without($scope.plants, $scope.plant);
         });
     }
 }
 
-gardenApp.controller('PlantListCtrl', ['$scope', 'Plant', PlantListCtrl])
+function PlantDetailCtrl($rootScope, Plant) {
+}
+
+gardenApp.controller('PlantListCtrl', ['$rootScope', 'Plant', PlantListCtrl])
+gardenApp.controller('PlantDetailCtrl', ['$rootScope', 'Plant', PlantDetailCtrl]);
