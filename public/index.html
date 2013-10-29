@@ -219,7 +219,22 @@
                 <label for="description">Description</label>
                 <input id="description" type="text" ng-model="plant.description"/>
             </li>
-           
+            <li data-role="fieldcontain">
+                <label for="minDaysToGerm">Min. Days To Germination</label>
+                <input id="minDaysToGerm" type="text" ng-model="plant.minDaysToGerm"/>
+            </li>
+			 <li data-role="fieldcontain">
+                <label for="maxDaysToGerm">Max Days To Germination</label>
+                <input id="maxDaysToGerm" type="text" ng-model="plant.maxDaysToGerm"/>
+            </li>
+			<li data-role="fieldcontain">
+                <label for="maxDaysToMaturity">Max Days To Maturity</label>
+                <input id="maxDaysToMaturity" type="text" ng-model="plant.minDaysToMaturity"/>
+            </li>
+			<li data-role="fieldcontain">
+                <label for="maxDaysToMaturity">Max Days To Maturity</label>
+                <input id="maxDaysToMaturity" type="text" ng-model="plant.maxDaysToMaturity"/>
+            </li>			
         </ul>
     </div>
     <div data-role="footer" data-position="fixed">
