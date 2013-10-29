@@ -20,5 +20,5 @@ angular.module('farmStatsServices', ['ngResource']).
 				update: {method: "PUT"},
 				query: {method:'GET', params:{plantId:'plants'}, isArray:true}
 			}
-	)});;
+	)});
 	

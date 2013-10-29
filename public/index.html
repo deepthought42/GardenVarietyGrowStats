@@ -18,9 +18,9 @@
   <link rel="stylesheet" href="css/bootstrap.css">
      
 </head>
-<body ng-controller="MushroomListCtrl">
+<body >
 <!-- Mushroom -->
-<div data-role="page" id="mushroom-list" >
+<div data-role="page" id="mushroom-list" ng-controller="MushroomListCtrl">
     <div data-theme="a" data-role="header">
 		<a href="#" data-icon="back" data-rel="back">Back</a>
 		 <a href="#mushroom-detail" ng-click="newMushroom()" data-icon="add" class="ui-btn-right">New</a>
@@ -72,7 +72,7 @@
 </div>
 
 <!--Mushroom Detail Page-->
-<div id="mushroom-detail" data-role="page" >
+<div id="mushroom-detail" data-role="page" ng-controller="MushroomDetailCtrl">
     <div data-role="header">
         <a href="#" data-icon="back" data-rel="back">Back</a>
 
@@ -146,7 +146,7 @@
     </div>
 </div>
 
-<div data-role="page" id="plant-list" >
+<div data-role="page" id="plant-list" ng-controller="PlantListCtrl">
     <div data-theme="a" data-role="header">
 		<a href="#" data-icon="back" data-rel="back">Back</a>
 		 <a href="#plant-detail" ng-click="newPlant()" data-icon="add" class="ui-btn-right">New</a>

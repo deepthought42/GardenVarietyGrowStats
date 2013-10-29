@@ -3,44 +3,42 @@
 
 /* Controllers */
 
-function MushroomListCtrl($scope, Mushroom) {
-  $scope.mushrooms = Mushroom.query();
+function MushroomListCtrl($rootScope, Mushroom) {
+  $rootScope.mushrooms = Mushroom.query();
   
-   $scope.selectMushroom = function (id) {
+   $rootScope.selectMushroom = function (id) {
 		console.log(id);
-        $scope.mushroom = _.where($scope.mushrooms, {id: id})[0];
+		$rootScope.mushroomId = id;
+        $rootScope.mushroom = _.where($rootScope.mushrooms, {id: $rootScope.mushroomId})[0];
     }
 	
-    $scope.newMushroom = function () {
-        $scope.mushroom = new Mushroom();
+    $rootScope.newMushroom = function () {
+        $rootScope.mushroom = new Mushroom();
     }
 	
-	 $scope.saveMushroom = function () {
-        if ($scope.mushroom.id == null) {
-            $scope.mushrooms.push($scope.mushroom);
-			$scope.mushroom.$save();
+	 $rootScope.saveMushroom = function () {
+        if ($rootScope.mushroom.id == null) {
+            $rootScope.mushrooms.push($rootScope.mushroom);
+			$rootScope.mushroom.$save();
         }
         else {
-            Mushroom.update({mushroomId: $scope.mushroom.id}, $scope.mushroom, function (data) {
+            Mushroom.update({mushroomId: $rootScope.mushroom.id}, $rootScope.mushroom, function (data) {
             });
         }
     }
 
-    $scope.completeMushroom = function (id) {
+    $rootScope.completeMushroom = function (id) {
         Mushroom.delete({mushroomId: id}, function () {
-            $scope.mushrooms = _.without($scope.mushrooms, $scope.mushroom);
+            $rootScope.mushrooms = _.without($rootScope.mushrooms, $rootScope.mushroom);
         });
     }
 }
 
-function MushroomDetailCtrl($scope, $routeParams, Mushroom) {
-  $scope.mushroom = Mushroom.get({mushroomId: $routeParams.mushroomId}, function(mushroom) {
-   
-  });
+function MushroomDetailCtrl($rootScope, Mushroom) {
 }
 
-gardenApp.controller('MushroomListCtrl', ['$scope', 'Mushroom', MushroomListCtrl])
-gardenApp.controller('MushroomDetailCtrl', ['$scope', '$routeParams', 'Mushroom', MushroomDetailCtrl]);
+gardenApp.controller('MushroomListCtrl', ['$rootScope', 'Mushroom', MushroomListCtrl])
+gardenApp.controller('MushroomDetailCtrl', ['$rootScope', 'Mushroom', MushroomDetailCtrl]);
 
 function PlantListCtrl($scope, Plant) {
 	$scope.plants = Plant.query();
