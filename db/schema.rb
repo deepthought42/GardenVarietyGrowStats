@@ -52,6 +52,4 @@ ActiveRecord::Schema.define(:version => 20130929224454) do
     t.datetime "picture_updated_at"
   end
 
-  add_index "plants", ["variety", "latin_name"], :name => "index_plants_on_variety_and_latin_name"
-
 end
