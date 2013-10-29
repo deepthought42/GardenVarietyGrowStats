@@ -2,8 +2,8 @@
 
 /* Services */
 
-angular.module('farmStatsServices', ['ngResource']).
-    factory('Mushroom', function($resource){
+var servicesModule = angular.module('farmStatsServices', ['ngResource']);
+servicesModule.factory('Mushroom', function($resource){
 		return $resource(
 			'mushrooms/:Id', 
 			{}, 
@@ -13,7 +13,7 @@ angular.module('farmStatsServices', ['ngResource']).
 			}
 	)});
 	
-gardenApp.factory('Plant', function($resource){
+servicesModule.factory('Plant', function($resource){
 		return $resource(
 			'plants/:Id', 
 			{}, 
