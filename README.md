@@ -6,7 +6,7 @@ Disclaimer : This program was created solely to experiment with AngularJS and Jq
 Requirements:
 
   AngularJS
-  Jquery UI
+  Jquery Mobile
   Ruby  1.9.2
   Rails 3.x
 
